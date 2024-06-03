@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const cors = require("cors")
 
- require("../database/mongoose.js")
+
+
 const model = require("../database/mongoose.js")
 const data = require("../database/fooddata.js")
 const api = require("../database/fooddata2.js")
@@ -15,6 +16,7 @@ app.use(require("./register.js"))
 app.use(require("./json.js"))
 app.use(require("./json2.js"))
 app.use(require("./cart.js"))
+app.use(require("../database/mongoose.js"))
 
 const PORT = process.env.PORT || 8000;
 
