@@ -17,7 +17,7 @@ app.use(require("./register.js"))
 app.use(require("./json.js"))
 app.use(require("./json2.js"))
 app.use(require("./cart.js"))
-app.use(require("./mongoose.js")) 
+require("./mongoose.js")
 
 const PORT = process.env.PORT || 8000;
 
