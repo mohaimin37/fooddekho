@@ -8,6 +8,9 @@ const model = require("./mongoose.js")
 const data = require("../database/fooddata.js")
 const api = require("../database/fooddata2.js")
 const mycart = require("../database/mycart.js")
+const order = require("../database/order.js")
+const checkout = require("./checkout");
+const myorders = require("./myorders");
 app.use(express.urlencoded({extended:false}))
 
 app.use(cors())
@@ -17,6 +20,11 @@ app.use(require("./register.js"))
 app.use(require("./json.js"))
 app.use(require("./json2.js"))
 app.use(require("./cart.js"))
+app.use(require("./checkout.js"));       // POST /cart
+app.use(require("./myorders.js"));   // POST /myorder
+
+
+
 require("./mongoose.js")
 
 const PORT = process.env.PORT || 8000;

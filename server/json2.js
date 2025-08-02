@@ -10,8 +10,6 @@ const arsh =async()=>{
     } catch (error) {
         console.log('big mistake has been done')
     }
-    
-
 }
 app.post("/item",async(req,res)=>{
    try {
